@@ -23,4 +23,6 @@ def articles(source_id):
     
     news_articles = get_articles(source_id)
     
-    return f'hello {source_id}'
+    
+    
+    return render_template('articles.html', articles = news_articles)
