@@ -4,7 +4,9 @@ class Config:
     General configurations parent class
     '''
     
-    pass
+    SOURCES_API_BASE_URL = 'https://newsapi.org/v2/sources?apiKey={}'
+        
+    ARTICLES_API_BASE_URL = 'https://newsapi.org/v2/everything?q={}&apiKey={}'
 
 class DevConfig(Config):
     '''

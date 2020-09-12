@@ -19,9 +19,9 @@ class NewsSource():
     A class defining the blueprint of a news source
     '''
     
-    def __init__( self, name, articles, image,)
+    def __init__( self, name, category, description,)
     
         self.source_name = name
-        self.source_articles = articles
-        self.source_image = image
+        self.source_category = description
+        self.source_description = description
         
