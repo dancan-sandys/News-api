@@ -2,9 +2,9 @@
 
 {%block content%}
     <!-- News sources-->
-
+    
     {% for news_source in news_sources%}
-        <h1>{{news_source.source_name}}</h1>
+        <h1><a href="/articles/{{news_source.source_id}}">{{news_source.source_name}}</a></h1>
     {%endfor%}
     
 {%endblock%}
