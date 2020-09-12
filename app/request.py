@@ -1,6 +1,6 @@
 from app import app
-from urllib import request
-from models import NewsSource
+import urllib.request, json
+from app.models import NewsSource
 
 
 #Getting api key
@@ -9,7 +9,7 @@ api_key = app.config['NEWS_API_KEY']
 sources_base_url = app.config['SOURCES_API_BASE_URL']
 articles_base_url = app.config['ARTICLES_API_BASE_URL']
 
-source = Bitcoin
+source = 'Bitcoin'
 
 get_sources_url = sources_base_url.format(api_key)
 get_artcles_url = articles_base_url.format(source, api_key)
@@ -43,8 +43,8 @@ def process_sources(available_sources):
         category = source.get('category')
         description = source.get('description')
         
-    news_source = NewsSource(name,category,description)
-    list_of_sources.append(news_source)
+        news_source = NewsSource(name,category,description)
+        list_of_sources.append(news_source)
     
     return list_of_sources
         
