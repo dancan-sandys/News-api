@@ -1,0 +1,11 @@
+.articles{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.article{
+    width: 200px;
+}
+
