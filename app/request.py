@@ -89,12 +89,16 @@ def process_articles(articles_to_be_processed):
         name = new_article.get('title')
         image = new_article.get('urlToImage')
         description = new_article.get('description')
+        description = description.replace("<ol>", "")
+        description = description.replace("<li>", "")
+        description = description.replace("</ol>", "")
+        description = description.replace("</li>", "")
         time = new_article.get('publishedAt')
         url_to_site = new_article.get('url')
     
-    
-        new_article = NewsArticle(name,image,description,time,url_to_site)
-        list_of_articles.append(new_article)
+        if image != None:
+            new_article = NewsArticle(name,image,description,time,url_to_site)
+            list_of_articles.append(new_article)
     
     return list_of_articles
     

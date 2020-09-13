@@ -4,6 +4,8 @@
 
     {% for news_source in news_sources%}
         <h1><a href="/articles/{{news_source.source_id}}">{{news_source.source_name}}</a></h1>
+        <h4>{{news_source.source_category}}</h4>
+        <p>{{news_source.source_description}}</p>
     {%endfor%}
 
 {% endmacro%}
@@ -13,7 +15,13 @@
 {% macro displayArticles(articles)%}
 
     {% for article in articles %}
-      <li>{{article.article_name}}</li> 
+    <li><strong><em>{{article.article_name}}</em></strong></li> 
+    <p><strong>Time of publications:</strong><small>{{article.article_time}}</small></p>
+    <img src="{{article.article_image}}" style="width: 20%; height: 20vh;" alt="{{article.article_name}}">  
+    
+    <p>{{article.article_description}}</p>
+
+
     {% endfor %}
 
 {%endmacro%}
