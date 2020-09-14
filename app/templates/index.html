@@ -9,9 +9,31 @@
 
 {%block content%}
     <!-- News sources-->
-    
-    {{macro.displaySources(news_sources)}}
 
-    <h1>Hello Dan</h1>
+    <h1 class="header">Pick Your Favorite News Source Bellow</h1>
+    <div class="sources">
+        
+        {{macro.displaySources(news_sources)}}
+    </div>
+    <hr>
+    <div class="footer">
+        <h1>The News Presenter</h1>
+        <div class="row">
+            <div class="contacts col-md-6">
+                <h2>Contacts</h2>
+                <p><strong>Email:</strong>dancan.oruko96@gmail.com</p>
+                <p><strong>Telephone:</strong> +254798940016</p>
+                <p><strong>Phone:</strong>0701824796</p>
+            </div>
+    
+            <div class="contacts col-md-6">
+                <h2>Subscribe to:</h2>
+                <p>The World of Politics and Leadership</p>
+                <p>The pleasure in Sports</p>
+                <p>The silence of Music</p>
+                <p>Art and Culture</p>
+            </div>
+        </div>
+    </div>
     
 {%endblock%}

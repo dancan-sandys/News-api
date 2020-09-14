@@ -16,17 +16,38 @@
         {% for article in articles %}
            
             <div class = "article">
-                <li><strong><em>{{article.article_name}}</em></strong></li> 
-                <p><strong>Time of publications:</strong><small>{{article.article_time}}</small></p>
-                <img src="{{article.article_image}}" style="width: 100%; height: 20vh;" alt="{{article.article_name}}">  
+                <h3><strong><em>{{article.article_name}}</em></strong></h3> 
+                <p><em><strong>Time of publications:</strong><small>{{article.article_time | truncate(13)}}</small></em></p>
+                <img src="{{article.article_image}}" style="width: 100%; height: 35vh;" alt="{{article.article_name}}">  
                 
                 <p>{{article.article_description}}</p>
+                <p><a href="{{article.url_to_site}}">Read The Article</a></p>
             </div>
         
 
         {% endfor %}
     </div>
 
-    <h4 class="text-uppercase">Hello</h4>  
+    <hr>
+    <div class="footer">
+        <h1>The News Presenter</h1>
+        <div class="row">
+            <div class="contacts col-md-6">
+                <h2>Contacts</h2>
+                <p><strong>Email:</strong>dancan.oruko96@gmail.com</p>
+                <p><strong>Telephone:</strong> +254798940016</p>
+                <p><strong>Phone:</strong>0701824796</p>
+            </div>
+    
+            <div class="contacts col-md-6">
+                <h2>Subscribe to:</h2>
+                <p>The World of Politics and Leadership</p>
+                <p>The pleasure in Sports</p>
+                <p>The silence of Music</p>
+                <p>Art and Culture</p>
+            </div>
+        </div>
+    </div>
+    
 {% endblock %}
 

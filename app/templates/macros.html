@@ -3,9 +3,12 @@
 {% macro displaySources(news_sources)%}
 
     {% for news_source in news_sources%}
-        <h1 class="text-uppercase"><a href="/articles/{{news_source.source_id}}">{{news_source.source_name}}</a></h1>
-        <h4>{{news_source.source_category}}</h4>
+    <div class="source jumbotron-fluid">
+        <h1 class="text-capitalize"><a href="/articles/{{news_source.source_id}}">{{news_source.source_name}}</a></h1>
+        <h4 class="sourcetitle">Categoty: <button class="btn-success">{{news_source.source_category}}</button></h4>
         <p>{{news_source.source_description}}</p>
+        <p><a href="/articles/{{news_source.source_id}}" btn-primary>View Articles</a></p>
+    </div>
     {%endfor%}
 
 {% endmacro%}
